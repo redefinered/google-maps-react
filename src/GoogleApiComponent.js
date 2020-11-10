@@ -55,7 +55,7 @@ export const wrapper = input => WrappedComponent => {
       this.mapRef=React.createRef();
     }
 
-    UNSAFE_componentWillReceiveProps(props) {
+    static getDerivedStateFromProps(props) {
       // Do not update input if it's not dynamic
       if (typeof input !== 'function') {
         return;
